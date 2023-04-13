@@ -149,6 +149,16 @@ a:hover{
 
 
 @media (max-width: 425px){
+    .container-pai{
+
+        width: 400px;
+        height: 1200px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    
+    }
+
 
     .container-text{
         width: 400px;
