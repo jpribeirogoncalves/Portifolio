@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(54, 54, 54);
+    background-color: rgb(37, 37, 37);
     color: #f6f6f6;
     display: flex;
     flex-direction: column;
@@ -109,5 +109,144 @@ main{
 
 a:hover{
     background-color: #fff;
+}
+
+@media (max-width: 1366px) {
+
+    .container-pai{
+
+        width: 800px;
+        height: 1200px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    
+    }
+
+    .links-cert{
+        width: 300px;
+        height: 800px ;
+        flex-direction: column;
+
+    }
+    
+
+    main{
+
+        height: 1620px;
+        flex-direction: column;
+    }
+
+    .links-cert a{
+        
+        width: 86%;
+     
+    
+    }
+
+
+}
+
+
+@media (max-width: 425px){
+
+    .container-text{
+        width: 400px;
+        height: 520px;
+    
+    }
+
+    .text{
+        width: 400px;
+        height: 500px;
+    }
+
+    .link-perfil{
+
+        width: 400px;
+        height: 50px;
+    
+    
+    }
+
+    #jp{
+        width: 400px;
+        
+    }
+
+    .links-cert a{
+       
+        width: 80%;
+      
+    }
+
+}
+
+@media (max-width: 375px){
+
+    .container-text{
+        width: 360px;
+        height: 520px;
+    
+    }
+
+    .text{
+        width: 360px;
+        height: 500px;
+    }
+
+    .link-perfil{
+
+        width: 360px;
+        height: 50px;
+    
+    
+    }
+
+    #jp{
+        width: 360px;
+        
+    }
+
+    .links-cert a{
+       
+        width: 80%;
+      
+    }
+
+}
+
+@media (max-width: 320px){
+
+    .container-text{
+        width: 320px;
+        height: 520px;
+    
+    }
+
+    .text{
+        width: 320px;
+        height: 500px;
+    }
+
+    .link-perfil{
+
+        width: 320px;
+        height: 50px;
+    
+    
+    }
+
+    #jp{
+        width: 320px;
+        
+    }
+
+    .links-cert a{
+       
+        width: 80%;
+      
+    }
+
 }
 
