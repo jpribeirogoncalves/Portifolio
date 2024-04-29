@@ -4,60 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
     <title>Portifolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .slide-in-left {
+            animation: slideInFromLeft 1s ease-out;
+        }
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .slide-in-right {
+            animation: slideInFromRight 1s ease-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-100">
 
-    <main>
+    <main class="container mx-auto px-4 py-8">
 
-    <div class="container-pai">
-        <div class="container-text">
-            <div class="text">
-                <h1>Formando em <strong>Analise e desenvolvimento de software!</strong></h1>
-                <p>Olá! Sou João Pedro, desenvolvedor Front-end e back-end com especialidade em HTML, CSS, Bootstrap, Tailwind e PHP. 
-                Estou cursando Analise e desenvolvimnto de software na Univiçosa. Atualmente estou no quinto periodo e  
-                estagiando na iPlanus como desenvolvedor full-stack em PHP. Sempre em busca de novos conhecimentos e experiência no mercado!
-                </p>
-                <p>Telefone: (31) 99632-6106</p>
-                <p>E-mail: joãopedroribeirogoncalves@gmail.com</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <div class="flex flex-col justify-center slide-in-left">
+                <div class="text-center">
+                    <h1 class="text-3xl md:text-4xl font-bold">Formando em <span class="text-blue-500">Analise e desenvolvimento de software!</span></h1>
+                    <p class="mt-4 text-gray-700 text-justify">Olá! Sou João Pedro, desenvolvedor Front-end e back-end com especialidade em HTML, CSS, Bootstrap, Tailwind e PHP. 
+                    Estou cursando Analise e desenvolvimento de software na Univiçosa. Atualmente estou no quinto período e  
+                    estagiando na iPlanus como desenvolvedor full-stack em PHP. Sempre em busca de novos conhecimentos e experiência no mercado!
+                    </p>
+                    <p class="mt-2 text-gray-700 text-justify">Telefone: (31) 99632-6106</p>
+                    <p class="mt-2 text-gray-700 text-justify">E-mail: joãopedroribeirogoncalves@gmail.com</p>
+                </div>
+
+                <div class="flex justify-center space-x-4 mt-8 fade-in">
+                    <a href="https://www.instagram.com/jp_ribe1ro/" class="text-blue-500 hover:underline">Instagram</a>
+                    <a href="https://github.com/jpribeirogoncalves" class="text-blue-500 hover:underline">Github</a>
+                    <a href="./pdf/Currículo - João Pedro.pdf" class="text-blue-500 hover:underline">Currículo</a>
+                </div>
             </div>
-    
-            <div class="link-perfil">
-                <a href="https://www.instagram.com/jp_ribe1ro/">Instagram</a>
-                <a href="https://github.com/jpribeirogoncalves">Github</a>
-                <a href="./pdf/Currículo - João Pedro.pdf">Currículo</culo></a>
+
+            <div class="flex justify-center slide-in-right">
+                <img id="jp" class="w-64 md:w-auto rounded-full shadow-lg" src="./img/photo.png" alt="Imagem de João Pedro">
             </div>
 
         </div>
-         
-            <div class="img-jp">
-                <img id="jp" src="./img/photo.png" alt="Imagem de João Pedro">
+
+        <div class="mt-8">
+            <h1 class="text-2xl md:text-3xl font-bold mb-4">Certificados Univiçosa</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="./pdf/Ciência de dados em Saúde_ um estudo de caso.pdf" class="text-blue-500 hover:underline">Ciência de dados em Saúde.pdf</a>
+                <a href="./pdf/Desafios de Design de Interação_ uma visão de usabilidade e experiência do usuário.pdf" class="text-blue-500 hover:underline">Desafios de Design de Interação.pdf</a>
+                <a href="./pdf/Dia do Estudante Empreendedor 2022.pdf" class="text-blue-500 hover:underline">Dia do Estudante Empreendedor 2022.pdf</a>
+                <a href="./pdf/eBPFlow_ Uma plataforma de hardware_software para offload de funções de rede.pdf" class="text-blue-500 hover:underline">Uma plataforma de hardware_software para offload de funções de rede.pdf</a>
+                <a href="./pdf/Feira da Cidadania.pdf" class="text-blue-500 hover:underline">Feira da Cidadania.pdf</a>
+                <a href="./pdf/Integração acadêmica ECO_ADS.pdf" class="text-blue-500 hover:underline">Integração acadêmica ECO_ADS.pdf</a>
+                <a href="./pdf/Quantum_ crescimento e oportunidades da computação quântica no mercado.pdf" class="text-blue-500 hover:underline">Quantum_ crescimento e oportunidades da computação quântica no mercado.pdf</a>
+                <a href="./pdf/Semana Acadêmica dos cursos Engenharia de Computação e Tecnologia ADS.pdf" class="text-blue-500 hover:underline">Semana Acadêmica dos cursos Engenharia de Computação e Tecnologia ADS.pdf</a>
+                <a href="./pdf/Workshop de Ferramentas de Ciência de Dados_ Técnicas de Aprendizado de Máquina usando Python.pdf" class="text-blue-500 hover:underline">Workshop de Ferramentas de Ciência de Dados Python.pdf</a>
+                <a href="./pdf/XIV Simpósio de Produção Acadêmica - SIMPAC.pdf" class="text-blue-500 hover:underline">XIV Simpósio de Produção Acadêmica - SIMPAC.pdf</a>
+                <a href="./pdf/Projeto NAP Digital.pdf" class="text-blue-500 hover:underline">Projeto NAP Digital.pdf</a>
+                <a href="./pdf/Projeto Inova Social.pdf" class="text-blue-500 hover:underline">Projeto Inova Social.pdf</a>
+                <a href="./pdf/Projeto Desenvolvedor.Tech_planejamento de Sistemas.pdf" class="text-blue-500 hover:underline">Projeto Desenvolvedor.Tech.pdf</a>
             </div>
-    </div>
-
-    <div class="container-links">
-        <h1>Certificados Univiçosa</h1>
-
-        <div class="links-cert">
-            <a href="./pdf/Ciência de dados em Saúde_ um estudo de caso.pdf">Ciência de dados em Saúde.pdf</a>
-            <a href="./pdf/Desafios de Design de Interação_ uma visão de usabilidade e experiência do usuário.pdf">Desafios de Design de Interação.pdf</a>
-            <a href="./pdf/Dia do Estudante Empreendedor 2022.pdf">Dia do Estudante Empreendedor 2022.pdf</a>
-            <a href="./pdf/eBPFlow_ Uma plataforma de hardware_software para offload de funções de rede.pdf">Uma plataforma de hardware_software para offload de funções de rede.pdf</a>
-            <a href="./pdf/Feira da Cidadania.pdf">Feira da Cidadania.pdf</a>
-            <a href="./pdf/Integração acadêmica ECO_ADS.pdf">Integração acadêmica ECO_ADS.pdf</a>
-            <a href="./pdf/Quantum_ crescimento e oportunidades da computação quântica no mercado.pdf">Quantum_ crescimento e oportunidades da computação quântica no mercado.pdf</a>
-            <a href="./pdf/Semana Acadêmica dos cursos Engenharia de Computação e Tecnologia ADS.pdf">Semana Acadêmica dos cursos Engenharia de Computação e Tecnologia ADS.pdf</a>
-            <a href="./pdf/Workshop de Ferramentas de Ciência de Dados_ Técnicas de Aprendizado de Máquina usando Python.pdf">Workshop de Ferramentas de Ciência de Dados Python.pdf</a>
-            <a href="./pdf/XIV Simpósio de Produção Acadêmica - SIMPAC.pdf">XIV Simpósio de Produção Acadêmica - SIMPAC.pdf</a>
-            <a href="./pdf/Projeto NAP Digital.pdf">Projeto NAP Digital.pdf</a>
-            <a href="./pdf/Projeto Inova Social.pdf">Projeto Inova Social.pdf</a>
-            <a href="./pdf/Projeto Desenvolvedor.Tech_planejamento de Sistemas.pdf">Projeto Desenvolvedor.Tech.pdf</a>
         </div>
-    </div>
-    
-    
-        
+
     </main>
     
 </body>
