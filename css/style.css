@@ -1,262 +1,37 @@
-body{
-    background-color: rgb(37, 37, 37);
-    color: #f6f6f6;
-    display: flex;
-    flex-direction: column;
-    
-}
-
-strong{
-    color:rgb(232, 212, 0);
-}
-
-main{
-    width: 100%;
-    height: 800px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.container-pai{
-
-    width: 800px;
-    height: 400px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-}
-
-.container-text{
-    width: 600px;
-    height: 520px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.container-links{
-    width: 800px;
-    height: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.text{
-    width: 350px;
-    height: 300px;
-}
-
-#jp{
-    border-radius: 30px;
-}
-
-.link-perfil{
-
-    width: 350px;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-
-}
-
-.links-cert{
-    width: 580px;
-    height: 530px ;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-}
-
-
-.link-perfil a{
-
-    width: 60px;
-    background-color: rgb(244, 201, 10);
-    border-radius: 10px;
-    border: 1px solid;
-    border-color: #fff;
-    cursor: pointer;
-    padding: 10px 20px;
-    color: rgb(0, 0, 0);
-    font-size: 16px;
-    text-decoration: none;
-
-}
-
-.links-cert a{
-    background-color: rgb(244, 201, 10);
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid;
-    border-color: #fff;
-    cursor: pointer;
-    padding: 10px 20px;
-    color: rgb(0, 0, 0);
-    font-size: 16px;
-    text-decoration: none;
-
-}
-
-a:hover{
-    background-color: #fff;
-}
-
-@media (max-width: 1366px) {
-
-    .container-pai{
-
-        width: 800px;
-        height: 1200px;
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-    
-    }
-
-    .links-cert{
-        width: 300px;
-        height: 800px ;
-        flex-direction: column;
-
-    }
-    
-
-    main{
-
-        height: 1500px;
-        flex-direction: column;
-    }
-
-    .links-cert a{
-        
-        width: 86%;
-     
-    
-    }
-
-
-}
-
-
-@media (max-width: 425px){
-    .container-pai{
-
-        width: 400px;
-        height: 1200px;
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-    
-    }
-
-
-    .container-text{
-        width: 3900px;
-        height: 520px;
-    
-    }
-
-    .text{
-        width: 390px;
-        height: 500px;
-    }
-
-    .link-perfil{
-
-        width: 390px;
-        height: 50px;
-    
-    
-    }
-
-    #jp{
-        width: 390px;
-        
-    }
-
-    .links-cert a{
-       
-        width: 80%;
-      
-    }
-
-}
-
-@media (max-width: 375px){
-
-    .container-text{
-        width: 360px;
-        height: 520px;
-    
-    }
-
-    .text{
-        width: 360px;
-        height: 500px;
-    }
-
-    .link-perfil{
-
-        width: 360px;
-        height: 50px;
-    
-    
-    }
-
-    #jp{
-        width: 360px;
-        
-    }
-
-    .links-cert a{
-       
-        width: 80%;
-      
-    }
-
-}
-
-@media (max-width: 320px){
-
-    .container-text{
-        width: 320px;
-        height: 520px;
-    
-    }
-
-    .text{
-        width: 320px;
-        height: 500px;
-    }
-
-    .link-perfil{
-
-        width: 320px;
-        height: 50px;
-    
-    
-    }
-
-    #jp{
-        width: 320px;
-        
-    }
-
-    .links-cert a{
-       
-        width: 80%;
-      
-    }
-
-}
-
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .slide-in-left {
+            animation: slideInFromLeft 1s ease-out;
+        }
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .slide-in-right {
+            animation: slideInFromRight 1s ease-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
